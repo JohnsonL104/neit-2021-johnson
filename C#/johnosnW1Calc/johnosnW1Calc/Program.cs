@@ -10,6 +10,12 @@ namespace johnosnW1Calc
     {
         static void Main(string[] args)
         {
+            String fName, operand, num1Str, num2Str;
+
+
+
+
+
         }
     }
 }
