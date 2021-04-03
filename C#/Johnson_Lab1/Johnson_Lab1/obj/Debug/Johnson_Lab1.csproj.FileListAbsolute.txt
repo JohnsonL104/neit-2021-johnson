@@ -1,0 +1,7 @@
+G:\CODE\neit-2021-johnson\C#\Johnson_Lab1\Johnson_Lab1\bin\Debug\Johnson_Lab1.exe.config
+G:\CODE\neit-2021-johnson\C#\Johnson_Lab1\Johnson_Lab1\bin\Debug\Johnson_Lab1.exe
+G:\CODE\neit-2021-johnson\C#\Johnson_Lab1\Johnson_Lab1\bin\Debug\Johnson_Lab1.pdb
+G:\CODE\neit-2021-johnson\C#\Johnson_Lab1\Johnson_Lab1\obj\Debug\Johnson_Lab1.csprojAssemblyReference.cache
+G:\CODE\neit-2021-johnson\C#\Johnson_Lab1\Johnson_Lab1\obj\Debug\Johnson_Lab1.csproj.CoreCompileInputs.cache
+G:\CODE\neit-2021-johnson\C#\Johnson_Lab1\Johnson_Lab1\obj\Debug\Johnson_Lab1.exe
+G:\CODE\neit-2021-johnson\C#\Johnson_Lab1\Johnson_Lab1\obj\Debug\Johnson_Lab1.pdb
