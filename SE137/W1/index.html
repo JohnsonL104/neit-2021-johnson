@@ -8,25 +8,49 @@
     <meta name = "author" content = "Lucas Johnson">
     <meta name = description content = "Week 1 biopage website">
     <style>
+        body{
+            background-color: #3a4750;
+            color: #eeeeee;
+            font-family: "Inconsolata", monospace;
+        }
+        a{
+            color: #eeeeee;
+        }
+        h1, h2{
+            color: #00adb5;
+        }
+        
+        #profPic{
+            width : 200px;
+        }
+        #hobbyPic{
+            height : 200px;
+        }
+        .hide{
+            display:none;
+        }
+        
     </style>
 </head>
 <body>
     <h1>Lucas Johnson</h1>
     <hr>
     <div id = "nav">
-        <a href = "#">Bio</a>
-        <a href = "#">Education</a>
-        <a href = "#">Hobbies</a>
+        <a href = "#" id = "bioLink">Bio</a>
+        <a href = "#" id = "eduLink">Education</a>
+        <a href = "#" id = "hobbyLink">Hobbies</a>
     </div>
     <hr>
     <div id = "main">
         <div id = "bio">
             <h2>My Bio</h2>
-            <img >
-            <p>Stuff ab me</p>
+            <img id = "profPic" src = "imgs/id_pic.jpg" alt = "A picture of me">
+            <p>&emsp;My name is <i>Lucas Johnson</i>. I have been interested in computers since 8th grade. With this interest I decided to go to<br> <b>Vinal Technical High School</b> and took the <strong>Information Systems Technology trade</strong>. This was a very broad computer class<br> but I focused mainly on programming.</p>
+            <p>&emsp;I find programming to be fun and challenging and it is one of my main hobbies. But I also like playing a lot of video games.<br> The main game I play is Escape From Tarkov. I also played <em>football</em> until my junior year and played <em>lacrosse</em> my junior and senoir year.</p>
+
             <hr>
         </div>
-        <div id = "ed">
+        <div id = "edu" class = "hide">
             <h2>Schooling</h2>
             <ul>
                 <li><a href = "https://nbis.northbranfordschools.org/en-US" target="_blank" >NBIS</a></li>
@@ -36,18 +60,58 @@
             <hr>
         </div>
       
-        <div id = "hobbies">
+        <div id = "hobbies" class = "hide">
             <h2>Hobbies</h2>
             <ol>
-                <li>item 1</li>
-                <li>item 2</li>
-                <li>item 3</li>
+                <li>Programming</li>
+                <li>Video Games</li>
+                <li>Sports(Football and lacrosse to be more specific)</li>
             </ol>
-            <img alt="image for the thing">
+            <img id = "hobbyPic"src = "imgs/hobby_pic.jpg" alt="A Picture of my setup" height = "200">
             <hr>
         </div>
+
+        <div id = "footer">
+            ©2020 Lucas Johnson | W1 Assignment
+        </div>
         
-        
+        <script>
+            var bioLink = document.querySelector(`#bioLink`)
+            var eduLink = document.querySelector(`#eduLink`)
+            var hobbyLink = document.querySelector(`#hobbyLink`)
+            var bio = document.querySelector(`#bio`)
+            var edu = document.querySelector(`#edu`)
+            var hobbies = document.querySelector(`#hobbies`)
+
+            bioLink.addEventListener(`click`, showBio)
+            function showBio(e){
+                e.preventDefault()
+                bio.classList.remove(`hide`)
+                edu.classList.add(`hide`)
+                hobbies.classList.add(`hide`)
+            }
+            eduLink.addEventListener(`click`, showEdu)
+            function showEdu(e){
+                e.preventDefault()
+                edu.classList.remove(`hide`)
+                bio.classList.add(`hide`)
+                hobbies.classList.add(`hide`)
+            }
+            hobbyLink.addEventListener(`click`, showHobby)
+            function showHobby(e){
+                e.preventDefault()
+                hobbies.classList.remove(`hide`)
+                edu.classList.add(`hide`)
+                bio.classList.add(`hide`)
+            }
+            
+
+            
+            
+            
+
+
+        </script>
     </div>
 </body>
 </html>
