@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bio Page</title>
+    <meta name = "author" content = "Lucas Johnson">
+    <meta name = description content = "Week 2 biopage website">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id = "gradient">
+    <h1>Lucas Johnson</h1>
+   
+    <div id = "nav">
+        <a href = "#" id = "bioLink">Bio</a>
+        <a href = "#" id = "eduLink">Education</a>
+        <a href = "#" id = "hobbyLink">Hobbies</a>
+    </div>
+    
+    <div id = "main">
+        <div id = "bio">
+            <h2>My Bio</h2>
+            <img id = "profPic" src = "imgs/id_pic.jpg" alt = "A picture of me">
+            <p>&emsp;My name is <i>Lucas Johnson</i>. I have been interested in computers since 8th grade. With this interest I decided to go to<br> <b>Vinal Technical High School</b> and took the <strong>Information Systems Technology trade</strong>. This was a very broad computer class<br> but I focused mainly on programming.</p>
+            <p>&emsp;I find programming to be fun and challenging and it is one of my main hobbies. But I also like playing a lot of video games.<br> The main game I play is Escape From Tarkov. I also played <em>football</em> until my junior year and played <em>lacrosse</em> my junior and senoir year.</p>
+
+            
+        </div>
+        <div id = "edu" class = "hide ">
+            <h2>Schooling</h2>
+            <ul>
+                <li><a href = "https://nbis.northbranfordschools.org/en-US" target="_blank" >NBIS</a></li>
+                <li><a href = "https://vinal.cttech.org/" target="_blank" >Vinal Technical High School</a></li>
+                <li><a href = "https://www.neit.edu/" target="_blank" >NEIT</a></li>
+            </ul>
+            
+        </div>
+      
+        <div id = "hobbies" class = "hide">
+            <h2>Hobbies</h2>
+            <ol>
+                <li>Programming</li>
+                <li>Video Games</li>
+                <li>Sports(Football and lacrosse to be more specific)</li>
+            </ol>
+            <img id = "hobbyPic"src = "imgs/hobby_pic.jpg" alt="A Picture of my setup" height = "200">
+            
+        </div>
+
+        
+        
+    </div>
+    <div id = "footer">
+        ©2020 Lucas Johnson | W2+ Assignment
+    </div>
+</div>
+    <script>
+        var bioLink = document.querySelector(`#bioLink`)
+        var eduLink = document.querySelector(`#eduLink`)
+        var hobbyLink = document.querySelector(`#hobbyLink`)
+        var bio = document.querySelector(`#bio`)
+        var edu = document.querySelector(`#edu`)
+        var hobbies = document.querySelector(`#hobbies`)
+
+        bioLink.addEventListener(`click`, showBio)
+        function showBio(e){
+            e.preventDefault()
+            bio.classList.remove(`hide`)
+            edu.classList.add(`hide`)
+            hobbies.classList.add(`hide`)
+        }
+        eduLink.addEventListener(`click`, showEdu)
+        function showEdu(e){
+            e.preventDefault()
+            edu.classList.remove(`hide`)
+            bio.classList.add(`hide`)
+            hobbies.classList.add(`hide`)
+        }
+        hobbyLink.addEventListener(`click`, showHobby)
+        function showHobby(e){
+            e.preventDefault()
+            hobbies.classList.remove(`hide`)
+            edu.classList.add(`hide`)
+            bio.classList.add(`hide`)
+        }
+        
+
+        
+        
+        
+
+
+    </script>
+</body>
+</html>
