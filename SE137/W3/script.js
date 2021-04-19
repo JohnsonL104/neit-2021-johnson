@@ -1,4 +1,6 @@
 var nbis = document.querySelector("#nbisCol");
+var vt = document.querySelector("#vtCol");
+var neit = document.querySelector("#neitCol");
 nbis.addEventListener("click", function(){
     window.open("https://nbis.northbranfordschools.org/en-US", "_blank");
 })
@@ -10,7 +12,8 @@ nbis.addEventListener("mouseout", function(){
     document.body.style.cursor = "default";
     nbis.style.backgroundColor = "#323232"
 })
-var vt = document.querySelector("#vtCol");
+
+
 vt.addEventListener("click", function(){
     window.open("https://vinal.cttech.org/", "_blank");
     
@@ -23,7 +26,8 @@ vt.addEventListener("mouseout", function(){
     document.body.style.cursor = "default";
     vt.style.backgroundColor = "#323232"
 })
-var neit = document.querySelector("#neitCol");
+
+
 neit.addEventListener("click", function(){
     window.open("https://www.neit.edu/", "_blank");
 })
