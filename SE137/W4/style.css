@@ -15,9 +15,6 @@ body{
 h1{
     display: inline-block;
 }
-main{
-
-}
 header{
     display: flex;
     justify-content:  center;
