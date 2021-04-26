@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    
+    width: 100%;
+    height: 100%;
+    color: #eee;
+}
+
+
+#gridContainter{
+    display: grid;
+    height: 100%;
+    background-color: #282828;
+    grid-template-columns: 40% 40% 20%;
+    grid-template-rows: 10% 35% 50% 5%;
+    grid-template-areas: "header header header"
+                         "im im ss"
+                         "as cls ss"
+                         "footer footer footer";
+
+}
+
+header{
+    grid-area: header;
+    background-color: #070707;
+}
+#backgroundImg{
+    grid-area: im;
+    background-image: url("imgs/banner.png");
+    background-size: 100%;
+}
+#aniversarySection{
+   
+    grid-area: as;
+    padding: 10px;
+}
+#asWrapper{
+    border-top: 2px solid red;
+    width: 96%;
+    height: 96%;
+    margin: calc(0.8*2%) 2%;
+    background-color: #393939;
+}
+#crystallakeSection{
+    grid-area: cls;
+}
+#clsWrapper{
+    width: 96%;
+    height: 96%;
+    margin: calc(0.8*2%) 2%;
+    background-color: #393939; 
+    display: flex;
+}
+#sideSection{
+    grid-area: ss;
+}
+#ssWrapper{
+    width: 95%;
+    height: 100%;
+    margin-left: 5%;
+    background-color: #393939;
+    display: flex;
+}
+footer{
+    grid-area: footer;
+    background-color: #070707;
+}
