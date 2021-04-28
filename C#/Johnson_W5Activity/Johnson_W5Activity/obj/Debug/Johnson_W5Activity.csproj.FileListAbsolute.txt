@@ -1,0 +1,10 @@
+C:\Users\008009764\Desktop\C#\Johnson_W5Activity\Johnson_W5Activity\bin\Debug\Johnson_W5Activity.exe.config
+C:\Users\008009764\Desktop\C#\Johnson_W5Activity\Johnson_W5Activity\bin\Debug\Johnson_W5Activity.exe
+C:\Users\008009764\Desktop\C#\Johnson_W5Activity\Johnson_W5Activity\bin\Debug\Johnson_W5Activity.pdb
+C:\Users\008009764\Desktop\C#\Johnson_W5Activity\Johnson_W5Activity\obj\Debug\Johnson_W5Activity.csprojAssemblyReference.cache
+C:\Users\008009764\Desktop\C#\Johnson_W5Activity\Johnson_W5Activity\obj\Debug\Johnson_W5Activity.Form1.resources
+C:\Users\008009764\Desktop\C#\Johnson_W5Activity\Johnson_W5Activity\obj\Debug\Johnson_W5Activity.Properties.Resources.resources
+C:\Users\008009764\Desktop\C#\Johnson_W5Activity\Johnson_W5Activity\obj\Debug\Johnson_W5Activity.csproj.GenerateResource.cache
+C:\Users\008009764\Desktop\C#\Johnson_W5Activity\Johnson_W5Activity\obj\Debug\Johnson_W5Activity.csproj.CoreCompileInputs.cache
+C:\Users\008009764\Desktop\C#\Johnson_W5Activity\Johnson_W5Activity\obj\Debug\Johnson_W5Activity.exe
+C:\Users\008009764\Desktop\C#\Johnson_W5Activity\Johnson_W5Activity\obj\Debug\Johnson_W5Activity.pdb
