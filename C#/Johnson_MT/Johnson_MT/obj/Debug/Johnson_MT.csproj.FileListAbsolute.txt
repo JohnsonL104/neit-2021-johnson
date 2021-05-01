@@ -1,0 +1,10 @@
+G:\CODE\neit-2021-johnson\C#\Johnson_MT\Johnson_MT\bin\Debug\Johnson_MT.exe.config
+G:\CODE\neit-2021-johnson\C#\Johnson_MT\Johnson_MT\bin\Debug\Johnson_MT.exe
+G:\CODE\neit-2021-johnson\C#\Johnson_MT\Johnson_MT\bin\Debug\Johnson_MT.pdb
+G:\CODE\neit-2021-johnson\C#\Johnson_MT\Johnson_MT\obj\Debug\Johnson_MT.csprojAssemblyReference.cache
+G:\CODE\neit-2021-johnson\C#\Johnson_MT\Johnson_MT\obj\Debug\Johnson_MT.form1.resources
+G:\CODE\neit-2021-johnson\C#\Johnson_MT\Johnson_MT\obj\Debug\Johnson_MT.Properties.Resources.resources
+G:\CODE\neit-2021-johnson\C#\Johnson_MT\Johnson_MT\obj\Debug\Johnson_MT.csproj.GenerateResource.cache
+G:\CODE\neit-2021-johnson\C#\Johnson_MT\Johnson_MT\obj\Debug\Johnson_MT.csproj.CoreCompileInputs.cache
+G:\CODE\neit-2021-johnson\C#\Johnson_MT\Johnson_MT\obj\Debug\Johnson_MT.exe
+G:\CODE\neit-2021-johnson\C#\Johnson_MT\Johnson_MT\obj\Debug\Johnson_MT.pdb
