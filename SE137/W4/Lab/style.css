@@ -1,70 +1,87 @@
 *{
     margin: 0;
-    padding: 0;
+    padding:0;
 }
-html, body{
+
+html,body{
+    width:100%;
+    height: 100%;
+    color: #FFFFFF;
     
-    width: 100%;
-    height: 100%;
-    color: #eee;
 }
-
-
-#gridContainter{
-    display: grid;
-    height: 100%;
+body{
     background-color: #282828;
-    grid-template-columns: 40% 40% 20%;
-    grid-template-rows: 10% 35% 50% 5%;
-    grid-template-areas: "header header header"
-                         "im im ss"
-                         "as cls ss"
-                         "footer footer footer";
-
 }
+
+#gridContainer{
+    display: grid;
+    grid-template-areas: "header header header header header"
+                         "bgImg bgImg bgImg bgImg side"
+                         "anniv anniv clSec clSec side"
+                         "footer footer footer footer footer";
+                         
+}
+
 
 header{
     grid-area: header;
     background-color: #070707;
+    height: 100px;
 }
+h1{
+    color: #BB0908, 100%;
+}
+
+
+
+
+
+
+
+
 #backgroundImg{
-    grid-area: im;
+    grid-area: bgImg;
+    width:1440px;
+    height: 388px;
     background-image: url("imgs/banner.png");
-    background-size: 100%;
+    background-size: 1440px 388px;
+    margin-left: 8px;
 }
-#aniversarySection{
-   
-    grid-area: as;
-    padding: 10px;
+
+
+#anniversarySection{
+    grid-area: anniv;
+    width: 700px;
+    height: 481px;
+    background-color: #393939;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-top: 5px solid #BB0908;
 }
 #asWrapper{
-    border-top: 2px solid red;
-    width: 96%;
-    height: 96%;
-    margin: calc(0.8*2%) 2%;
-    background-color: #393939;
-}
-#crystallakeSection{
-    grid-area: cls;
-}
-#clsWrapper{
-    width: 96%;
-    height: 96%;
-    margin: calc(0.8*2%) 2%;
-    background-color: #393939; 
     display: flex;
 }
+#leftImg{
+    width: 310px;
+    height: 478px;
+    background-image: url("imgs/f13_iv_poster.png");
+    background-size: 310px 478px;
+    margin-left:2px;
+}
+#rightSection{
+    margin-left: 19px;
+    width: 390px;
+}
+
+#crystalLakeSection{
+    grid-area: clSec;
+}
+
 #sideSection{
-    grid-area: ss;
+    grid-area: side;
 }
-#ssWrapper{
-    width: 95%;
-    height: 100%;
-    margin-left: 5%;
-    background-color: #393939;
-    display: flex;
-}
+
 footer{
+    height: 60%;
     grid-area: footer;
-    background-color: #070707;
 }

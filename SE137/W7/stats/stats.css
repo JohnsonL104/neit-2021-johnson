@@ -1,0 +1,90 @@
+html, body{
+    margin:0;
+    height:100vh;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+table{
+    width:80%;
+    border-collapse: collapse;
+}
+ td{
+    border-bottom:1px solid black;
+}
+thead{
+    background-color: #495464;
+    color: #e8e8e8;
+}
+
+
+@media (max-width:1920px) {
+    h1{
+        font-size: 1.5rem;
+
+    }
+    tr{
+        font-size: 1rem;
+    }    
+    #small{
+        display: none;
+    }
+}
+@media (max-width:1000px){
+    h1{
+        font-size: 1.5rem;
+
+    }
+    tr{
+        font-size: 1rem;
+    } 
+    #big{
+        display: none;
+    }
+    #small{
+        display: table-row;
+    }
+    
+}
+@media (max-width:500px){
+    h1{
+        font-size: 2rem;
+
+    }
+    thead tr{
+        font-size: 1.5rem;
+    } 
+    tbody tr{
+        font-size: 1.25rem;
+    }
+    .stat{
+        display:none;
+    }
+    thead tr{
+
+    }
+    tbody tr{
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
