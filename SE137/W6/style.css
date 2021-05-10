@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color :#060606;
+    color: #E3E3E3;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+header{
+    height: 23px;
+    background-color: #505050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header h1{
+    flex-grow: 1;
+    text-align: center;
+    
+    line-height: 14px;
+}
+header div{
+    margin-left: 45px;
+}
+header div a{
+    text-decoration: none;
+    color: #E3E3E3;
+    margin-right: 15px;
+}
+header div a:hover{
+    color: #fff;
+}
+
+
+
+
+
+
+main{
+    flex-grow: 1;
+    display: flex;
+}
+#left{
+    width:45px;
+    background-color: #505050;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#tray{
+    
+    background: url('imgs/sprites.png') no-repeat -169px -25px;
+	width: 12px;
+	height: 12px;
+    transform: scale(2.166);
+    margin-top: 19px;
+}
+#tray:hover{
+    background: url('imgs/sprites.png') no-repeat -169px -214px;
+    cursor: pointer
+}
+#tiles{
+    
+    background: url('imgs/sprites.png') no-repeat -217px -2px;
+	width: 11px;
+	height: 11px;
+    transform: scale(2.166);
+    margin-top: 28px;
+}
+#tiles:hover{
+    background: url('imgs/sprites.png') no-repeat -217px -191px;
+    cursor: pointer
+}
+#trash{
+    background: url('imgs/sprites.png') no-repeat -458px 0;
+	width: 11px;
+	height: 13px;
+    transform: scale(2.166);
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+#trash:hover{
+    background: url('imgs/sprites.png') no-repeat -458px -189px;
+    cursor: pointer
+}
+
+
+
+
+
+
+#middle{
+    background-color: #373737;
+    width: 144px;
+    transition: width 0.5s;
+}
+#middle div{
+    overflow: hidden;
+}
+details summary {
+    overflow: hidden;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    border-top: 1px #E3E3E3 solid;
+    border-bottom: 1px #E3E3E3 solid;
+    list-style: none;
+    
+}
+summary:hover{
+    color: #fff;
+    cursor: pointer;
+}
+summary:hover i{
+    background: url('imgs/sprites.png') no-repeat -460px -263px;
+}
+details summary i{
+    margin-left: 7px;
+    margin-right: 9px;
+    background: url('imgs/sprites.png') no-repeat -460px -74px;
+	width: 10px;
+	height: 12px;
+    transform: scale(125%);
+}
+details[open] summary i{
+    transform: rotate(90deg);
+}
+
+details div{
+    display: flex;
+    height: 30px;
+    align-items: center;
+}
+details div i{
+    margin-left: 22px;
+    margin-right: 9px;
+    background: url('imgs/sprites.png') no-repeat -26px -25px;
+	width: 9px;
+	height: 12px;
+}
+details div:hover{
+    color: #fff;
+    cursor: pointer;
+}
+details div:hover i{
+    background: url('imgs/sprites.png') no-repeat -26px -214px;
+}
+
+
+details:last-child div i{
+    background: url('imgs/sprites.png') no-repeat -74px -120px;
+}
+details:last-child div:hover i{
+    background: url('imgs/sprites.png') no-repeat -74px -309px;
+}
+
+.hidden{
+    transition: width 1s;
+    width:0 !important;
+}
+
+
+
+
+
+#right{
+    flex-grow: 1;
+}
+
+#tabs{
+    height: 34px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.tab{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    min-width: 173px;
+    background-color: #373737;
+    border-left: 1px #060606 solid;
+    border-right: 1px #060606 solid;
+}
+.tab div{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.tab p{
+    padding-left: 10px;
+}
+.tab div i{
+    
+    background: url('imgs/sprites.png') no-repeat -170px -121px;
+	width: 11px;
+	height: 12px;
+}
+.tab a{
+    background: url('imgs/sprites.png') no-repeat -314px -2px;
+	width: 10px;
+	height: 10px;
+    padding-right: 6px;
+}
+.tab:hover{
+    color: #fff;
+    cursor: pointer;
+}
+.tab:hover div i{
+    background: url('imgs/sprites.png') no-repeat -170px -310px;
+}
+.tab a:hover{
+    background: url('imgs/sprites.png') no-repeat -314px -191px;
+}
+
+.selected{
+    background-color: #161616;
+}
+
+#url{
+    background-color: #161616;
+    height: 23px;
+    display: flex;
+    align-items: center;
+}
+#url p{
+    margin-left: 10px;
+}
+#url a{
+    color: #0058A9;
+}
+#url a:hover{
+    color: #e3e3e3;
+}
+/* #url a:visited{
+    color: #0058A9;
+} */
+
+
+
+
+
+
+
+
+
+
+footer{
+    height: 14px;
+    background-color:#0254A0;
+    font-size: 10px;
+    padding-left: 9px;
+}
