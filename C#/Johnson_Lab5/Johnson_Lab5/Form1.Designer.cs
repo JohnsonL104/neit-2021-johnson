@@ -62,8 +62,9 @@ namespace Johnson_Lab5
             this.lblFeedback.AutoSize = true;
             this.lblFeedback.Location = new System.Drawing.Point(79, 350);
             this.lblFeedback.Name = "lblFeedback";
-            this.lblFeedback.Size = new System.Drawing.Size(0, 13);
+            this.lblFeedback.Size = new System.Drawing.Size(7, 13);
             this.lblFeedback.TabIndex = 44;
+            this.lblFeedback.Text = "\r\n";
             // 
             // btnSubmit
             // 
@@ -271,7 +272,7 @@ namespace Johnson_Lab5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 350);
+            this.ClientSize = new System.Drawing.Size(278, 351);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtIGUrl);

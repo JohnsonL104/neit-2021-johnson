@@ -1,0 +1,14 @@
+C:\Users\008009764\Desktop\neit-2021-johnson\C#\W4SampleCode\W4SampleCode\bin\Debug\W4SampleCode.exe.config
+C:\Users\008009764\Desktop\neit-2021-johnson\C#\W4SampleCode\W4SampleCode\bin\Debug\W4SampleCode.exe
+C:\Users\008009764\Desktop\neit-2021-johnson\C#\W4SampleCode\W4SampleCode\bin\Debug\W4SampleCode.pdb
+C:\Users\008009764\Desktop\neit-2021-johnson\C#\W4SampleCode\W4SampleCode\obj\Debug\W4SampleCode.csprojAssemblyReference.cache
+C:\Users\008009764\Desktop\neit-2021-johnson\C#\W4SampleCode\W4SampleCode\obj\Debug\W4SampleCode.csproj.CoreCompileInputs.cache
+C:\Users\008009764\Desktop\neit-2021-johnson\C#\W4SampleCode\W4SampleCode\obj\Debug\W4SampleCode.exe
+C:\Users\008009764\Desktop\neit-2021-johnson\C#\W4SampleCode\W4SampleCode\obj\Debug\W4SampleCode.pdb
+G:\CODE\neit-2021-johnson\C#\W6Sample1\W4SampleCode\bin\Debug\W4SampleCode.exe.config
+G:\CODE\neit-2021-johnson\C#\W6Sample1\W4SampleCode\bin\Debug\W4SampleCode.exe
+G:\CODE\neit-2021-johnson\C#\W6Sample1\W4SampleCode\bin\Debug\W4SampleCode.pdb
+G:\CODE\neit-2021-johnson\C#\W6Sample1\W4SampleCode\obj\Debug\W4SampleCode.csprojAssemblyReference.cache
+G:\CODE\neit-2021-johnson\C#\W6Sample1\W4SampleCode\obj\Debug\W4SampleCode.csproj.CoreCompileInputs.cache
+G:\CODE\neit-2021-johnson\C#\W6Sample1\W4SampleCode\obj\Debug\W4SampleCode.exe
+G:\CODE\neit-2021-johnson\C#\W6Sample1\W4SampleCode\obj\Debug\W4SampleCode.pdb
