@@ -1,0 +1,10 @@
+G:\CODE\neit-2021-johnson\C#\Johnson_W7Activity\EbookConnToDB\EbookConnToDB\bin\Debug\EbookConnToDB.exe.config
+G:\CODE\neit-2021-johnson\C#\Johnson_W7Activity\EbookConnToDB\EbookConnToDB\bin\Debug\EbookConnToDB.exe
+G:\CODE\neit-2021-johnson\C#\Johnson_W7Activity\EbookConnToDB\EbookConnToDB\bin\Debug\EbookConnToDB.pdb
+G:\CODE\neit-2021-johnson\C#\Johnson_W7Activity\EbookConnToDB\EbookConnToDB\obj\Debug\EbookConnToDB.csprojAssemblyReference.cache
+G:\CODE\neit-2021-johnson\C#\Johnson_W7Activity\EbookConnToDB\EbookConnToDB\obj\Debug\EbookConnToDB.Form1.resources
+G:\CODE\neit-2021-johnson\C#\Johnson_W7Activity\EbookConnToDB\EbookConnToDB\obj\Debug\EbookConnToDB.Properties.Resources.resources
+G:\CODE\neit-2021-johnson\C#\Johnson_W7Activity\EbookConnToDB\EbookConnToDB\obj\Debug\EbookConnToDB.csproj.GenerateResource.cache
+G:\CODE\neit-2021-johnson\C#\Johnson_W7Activity\EbookConnToDB\EbookConnToDB\obj\Debug\EbookConnToDB.csproj.CoreCompileInputs.cache
+G:\CODE\neit-2021-johnson\C#\Johnson_W7Activity\EbookConnToDB\EbookConnToDB\obj\Debug\EbookConnToDB.exe
+G:\CODE\neit-2021-johnson\C#\Johnson_W7Activity\EbookConnToDB\EbookConnToDB\obj\Debug\EbookConnToDB.pdb
