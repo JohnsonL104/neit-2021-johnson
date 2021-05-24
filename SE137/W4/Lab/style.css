@@ -2,9 +2,16 @@
     margin: 0;
     padding:0;
 }
+p{
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 36px;
 
+}
 html,body{
-    width:100%;
+    width:1820px;
     height: 100%;
     color: #FFFFFF;
     
@@ -27,9 +34,35 @@ header{
     grid-area: header;
     background-color: #070707;
     height: 100px;
+    display: flex;
+    justify-content: space-between;
 }
+
+header div{
+    width: 208px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+i{
+    font-size: 60px;
+    
+    color: #BB0908;
+}
+
+
+
 h1{
-    color: #BB0908, 100%;
+    font-family: Teko;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 69px;
+
+    color: #BB0908;
+    margin-top: 35px;
+    margin-left: 30px;
 }
 
 
@@ -61,6 +94,10 @@ h1{
 #asWrapper{
     display: flex;
 }
+
+
+
+
 #leftImg{
     width: 310px;
     height: 478px;
@@ -68,20 +105,208 @@ h1{
     background-size: 310px 478px;
     margin-left:2px;
 }
+
+
+
 #rightSection{
     margin-left: 19px;
     width: 390px;
+    
 }
+#top{
+    width: 348px;
+}
+#top h2{
+    font-family: Rock Salt;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 72px;
+    
+    color: #FF1D29;
+    border-bottom: 4px solid #FF1D29;
+    }
+
+#top p{
+    height: 217px;
+    display: flex;
+    align-items: flex-end;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: regular;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+
+#bottom{
+    display: flex;
+    margin-top: 10px;
+}
+
+#leftMovieImg img{
+    width: 117px;
+    height: 148px;
+}
+
+#rightAmazonInfo{
+    width: 191px;
+    height: 157px;
+    margin-left: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#rightAmazonInfo a{
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 27px;
+text-decoration-line: underline;
+
+color: #22C1CB;
+}
+
+
+#rightAmazonInfo p{
+    font-family: Teko;
+font-style: normal;
+font-weight: bold;
+font-size: 72px;
+line-height: 103px;
+text-decoration-line: underline;
+
+color: #FFFFFF;
+
+}
+
+
+
+
+
+
+
+
+
 
 #crystalLakeSection{
     grid-area: clSec;
+    width: 700px;
+    height: 481px;
+    background-color: #393939;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-top: 5px solid #BB0908;
 }
+#clsWrapper{
+    width: 641px;
+    height: 418px;
+    margin-left: 23px;
+    margin-top: 17px;
+}
+
+#clsWrapper img{
+    width: 641px;
+    height: 229px;
+    margin-bottom: 19px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #sideSection{
+    background-color: #393939;
+    width: 360px;
+    height: 918px;
     grid-area: side;
+    margin-left: 12px;
+    display: flex;
+    justify-content: center;
+}
+#ssWrapper{
+   width: 325px; 
+   height: 865px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
+#wtcclImg img{
+    margin-top: 25px;
+    width: 325px;
+    height: 254px;
+}
+
+#dates{
+    width: 275px;
+}
+#dates p{
+    margin-top: 23px;
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+}
+#dates p:first-of-type{
+    margin-top: 30px;
+}
+#dates p:last-of-type{
+    margin-bottom: 30px;
+}
+.date{
+    font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 21px;
+color: #FC0303;
+
+}
+
+#bottomImg img{
+    width: 325px;
+height: 170.52px;
+}
+
+
+
+
+
+
+
+
+
+
 footer{
-    height: 60%;
+    height: 60px;
+    background-color: #070707;
+    display: flex;
+    align-items: center;
     grid-area: footer;
+    
+}
+
+footer p{
+    font-family: Teko;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 17px;
+
+color: #BCBCBC;
+margin-left: 30px;
 }
