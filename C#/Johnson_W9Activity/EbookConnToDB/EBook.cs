@@ -73,7 +73,7 @@ namespace CommonClass
         {
             string result = "";
 
-            SqlConnection conn = new SqlConnection(@"Server = sql.neit.edu\sqlstudentserver, 4500; Database = SE245_LJohnson; User Id = SE245_LJohnson; Password = 008009764; ");
+            SqlConnection conn = new SqlConnection(@GetConnection());
 
 
             SqlCommand comm = new SqlCommand("INSERT INTO EBooks (Title, AuthorFirst, AuthorLast, AuthorEmail, Pages, DatePublished, dateRentalExpires, Price, BookmarkPage) VALUES (@Title, @AuthorFirst, @AuthorLast, @AuthorEmail, @Pages, @DatePublished, @dateRentalExpires, @Price, @BookmarkPage)");
@@ -110,10 +110,10 @@ namespace CommonClass
         {
             string result = "";
 
-            SqlConnection conn = new SqlConnection(@"Server = sql.neit.edu\sqlstudentserver, 4500; Database = SE245_LJohnson; User Id = SE245_LJohnson; Password = 008009764; ");
+            SqlConnection conn = new SqlConnection(GetConnection());
 
 
-            SqlCommand comm = new SqlCommand("UPDATE EBooks SET Title=@Title, AuthorFirst= @AuthorFirst, AuthorLast= @AuthorLast, AuthorEmail=@AuthorEmail, Pages= @Pages, DatePublished= @DatePublished, dateRentalExpires= @dateRentalExpires, Price= @Price, Bookmark= @BookmarkPage WHERE EBookID = @EBookID)");
+            SqlCommand comm = new SqlCommand("UPDATE EBooks SET Title = @Title, AuthorFirst = @AuthorFirst, AuthorLast = @AuthorLast, AuthorEmail = @AuthorEmail, Pages = @Pages, DatePublished = @DatePublished, dateRentalExpires = @dateRentalExpires, Price = @Price, BookmarkPage = @BookmarkPage WHERE EBookID = @EBookID");
             comm.Connection = conn;
 
 
@@ -138,10 +138,41 @@ namespace CommonClass
             }
             catch (Exception err)
             {
+
+                result = "ERROR:" + err.Message + "\n" + comm.CommandText;
+            }
+            return result;
+        }
+
+        public String DeleteRecord()
+        {
+            string result = "";
+
+            SqlConnection conn = new SqlConnection(@GetConnection());
+
+            SqlCommand comm = new SqlCommand("DELETE FROM EBooks WHERE EBookID = @EBookID");
+            comm.Connection = conn;
+
+
+           
+            comm.Parameters.AddWithValue("@EBookID", EBookID);
+
+            try
+            {
+                conn.Open();
+                int resultInt = comm.ExecuteNonQuery();
+                result = $"SUCCESS: Updated {resultInt} records";
+
+                conn.Close();
+            }
+            catch (Exception err)
+            {
+
                 result = "ERROR:" + err.Message;
             }
             return result;
         }
+
         public DataSet GetRecordsFromDB(String title, String last)
         {
             DataSet ds = new DataSet();
@@ -206,7 +237,7 @@ namespace CommonClass
 
         public String GetConnection()
         {
-            return @"Server = sql.neit.edu\sqlstudentserver, 4500; Database = SE245_LJohnson; User Id = SE245_LJohnson; Password = 008009764; ";
+            return @"Server = sql.neit.edu\studentsqlserver, 4500; Database = SE245_LJohnson; User Id = SE245_LJohnson; Password = 008009764; ";
 
         }
 

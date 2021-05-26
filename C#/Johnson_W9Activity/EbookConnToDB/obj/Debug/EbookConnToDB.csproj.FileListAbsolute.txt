@@ -32,3 +32,15 @@ C:\Users\lucas\Documents\neit-2021-johnson\C#\Johnson_W9Activity\EbookConnToDB\o
 C:\Users\lucas\Documents\neit-2021-johnson\C#\Johnson_W9Activity\EbookConnToDB\bin\Debug\EbookConnToDB.exe.config
 C:\Users\lucas\Documents\neit-2021-johnson\C#\Johnson_W9Activity\EbookConnToDB\bin\Debug\EbookConnToDB.exe
 C:\Users\lucas\Documents\neit-2021-johnson\C#\Johnson_W9Activity\EbookConnToDB\bin\Debug\EbookConnToDB.pdb
+C:\Users\008009764\Desktop\C#\Johnson_W9Activity\EbookConnToDB\bin\Debug\EbookConnToDB.exe.config
+C:\Users\008009764\Desktop\C#\Johnson_W9Activity\EbookConnToDB\bin\Debug\EbookConnToDB.exe
+C:\Users\008009764\Desktop\C#\Johnson_W9Activity\EbookConnToDB\bin\Debug\EbookConnToDB.pdb
+C:\Users\008009764\Desktop\C#\Johnson_W9Activity\EbookConnToDB\obj\Debug\EbookConnToDB.csprojAssemblyReference.cache
+C:\Users\008009764\Desktop\C#\Johnson_W9Activity\EbookConnToDB\obj\Debug\EbookConnToDB.Control.resources
+C:\Users\008009764\Desktop\C#\Johnson_W9Activity\EbookConnToDB\obj\Debug\EbookConnToDB.Form1.resources
+C:\Users\008009764\Desktop\C#\Johnson_W9Activity\EbookConnToDB\obj\Debug\EbookConnToDB.Properties.Resources.resources
+C:\Users\008009764\Desktop\C#\Johnson_W9Activity\EbookConnToDB\obj\Debug\EbookConnToDB.Search.resources
+C:\Users\008009764\Desktop\C#\Johnson_W9Activity\EbookConnToDB\obj\Debug\EbookConnToDB.csproj.GenerateResource.cache
+C:\Users\008009764\Desktop\C#\Johnson_W9Activity\EbookConnToDB\obj\Debug\EbookConnToDB.csproj.CoreCompileInputs.cache
+C:\Users\008009764\Desktop\C#\Johnson_W9Activity\EbookConnToDB\obj\Debug\EbookConnToDB.exe
+C:\Users\008009764\Desktop\C#\Johnson_W9Activity\EbookConnToDB\obj\Debug\EbookConnToDB.pdb

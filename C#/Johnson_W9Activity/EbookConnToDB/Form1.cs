@@ -31,6 +31,8 @@ namespace EbookConnToDB
 
             EBook ebook = new EBook();
 
+            ebook.EBookID = ebookID;
+
             SqlDataReader dr = ebook.GetRecordsFromDBByID(ebookID);
             
             while (dr.Read())
@@ -58,8 +60,7 @@ namespace EbookConnToDB
             ebook.AuthorFirst = txtAuthorFirst.Text;
             ebook.AuthorLast = txtAuthorLast.Text;
             ebook.Email = txtEmail.Text;
-            // have to put in most current validation and plan to add in thing to check if everything in the string is a number but i want to make sure it is in the most recent validation library and then i basicially just have to test the connection to the db and make sure i can then also insert but i think that is all good also have to make sure a bunch of the book things are being validated and fix some of the validation from last lab becuase it wasn't working like i thought it was just go and check the png from the feedback from that lab
-            
+          
             
             int tempInt;
             Double tempDoub;
@@ -108,7 +109,22 @@ namespace EbookConnToDB
 
         private void btnDeleteBook_Click(object sender, EventArgs e)
         {
+            EBook ebook = new EBook();
+            
+            ebook.EBookID = Int32.Parse(lblEBookID.Text);
 
+            
+
+
+            if (!ebook.Feedback.Contains("ERROR:"))
+            {
+                String result = ebook.DeleteRecord();
+                MessageBox.Show(result);
+            }
+            else
+            {
+                MessageBox.Show(ebook.Feedback);
+            }
         }
 
         private void btnUpdateBook_Click(object sender, EventArgs e)
@@ -119,8 +135,7 @@ namespace EbookConnToDB
             ebook.AuthorFirst = txtAuthorFirst.Text;
             ebook.AuthorLast = txtAuthorLast.Text;
             ebook.Email = txtEmail.Text;
-            // have to put in most current validation and plan to add in thing to check if everything in the string is a number but i want to make sure it is in the most recent validation library and then i basicially just have to test the connection to the db and make sure i can then also insert but i think that is all good also have to make sure a bunch of the book things are being validated and fix some of the validation from last lab becuase it wasn't working like i thought it was just go and check the png from the feedback from that lab
-
+            ebook.EBookID = Int32.Parse(lblEBookID.Text);
 
             int tempInt;
             Double tempDoub;
