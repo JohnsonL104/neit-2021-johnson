@@ -35,9 +35,8 @@ namespace Johnson_Lab5
 
             MessageBox.Show(id);
 
-            int ebookIDInt = Convert.ToInt32(id);
 
-            Form1 form = new Form1(ebookIDInt);
+            Form1 form = new Form1(id);
             form.ShowDialog();
         }
 

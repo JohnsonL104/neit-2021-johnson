@@ -12,7 +12,18 @@ namespace CommonClass
     {
         private String cellPhone;
         private String instagramURL;
-        
+        private String id;
+        public String Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                id = value;
+            }
+        }
         public String CellPhone
         {
             get
@@ -54,7 +65,7 @@ namespace CommonClass
         {
             string result = "";
 
-            SqlConnection conn = new SqlConnection(@"Server = sql.neit.edu\sqlstudentserver, 4500; Database = SE245_LJohnson; User Id = SE245_LJohnson; Password = 008009764; ");
+            SqlConnection conn = new SqlConnection(@GetConnection());
 
 
             SqlCommand comm = new SqlCommand("INSERT INTO PersonV2 (FirstName, MiddleName, LastName, Street1, Street2, City, State, Zip, Phone, CellPhone, InstagramURL, Email) VALUES (@FirstName, @MiddleName, @LastName, @Street1, @Street2, @City, @State, @Zip, @Phone, @CellPhone, @InstagramURL, @Email)");
@@ -86,6 +97,75 @@ namespace CommonClass
             }
             catch (Exception err)
             {
+                result = "ERROR:" + err.Message;
+            }
+            return result;
+        }
+        public String UpdateRecord()
+        {
+            string result = "";
+
+            SqlConnection conn = new SqlConnection(GetConnection());
+
+
+            SqlCommand comm = new SqlCommand("UPDATE PersonV2 SET FirstName = @FirstName, MiddleName = @MiddleName, LastName = @LastName, Street1 = @Street1, Street2 = @Street2, City = @City, State = @State, Zip = @Zip, Phone = @Phone, CellPhone = @CellPhone, InstagramURL = @InstagramURL, Email = @Email WHERE Id = @Id");
+            comm.Connection = conn;
+
+
+            comm.Parameters.AddWithValue("@FirstName", FirstName);
+            comm.Parameters.AddWithValue("@MiddleName", MiddleName);
+            comm.Parameters.AddWithValue("@LastName", LastName);
+            comm.Parameters.AddWithValue("@Street1", Street1);
+            comm.Parameters.AddWithValue("@Street2", Street2);
+            comm.Parameters.AddWithValue("@City", City);
+            comm.Parameters.AddWithValue("@State", State);
+            comm.Parameters.AddWithValue("@Zip", Zip);
+            comm.Parameters.AddWithValue("@Phone", Phone);
+            comm.Parameters.AddWithValue("@CellPhone", CellPhone);
+            comm.Parameters.AddWithValue("@InstagramURL", InstagramURL);
+            comm.Parameters.AddWithValue("@Email", Email);
+            comm.Parameters.AddWithValue("@Id", Id);
+
+            try
+            {
+                conn.Open();
+                int resultInt = comm.ExecuteNonQuery();
+                result = $"SUCCESS: Updated {resultInt} records";
+
+                conn.Close();
+            }
+            catch (Exception err)
+            {
+
+                result = "ERROR:" + err.Message + "\n" + comm.CommandText;
+            }
+            return result;
+        }
+
+        public String DeleteRecord()
+        {
+            string result = "";
+
+            SqlConnection conn = new SqlConnection(@GetConnection());
+
+            SqlCommand comm = new SqlCommand("DELETE FROM PersonV2 WHERE Id = @Id");
+            comm.Connection = conn;
+
+
+
+            comm.Parameters.AddWithValue("@Id", Id);
+
+            try
+            {
+                conn.Open();
+                int resultInt = comm.ExecuteNonQuery();
+                result = $"SUCCESS: Updated {resultInt} records";
+
+                conn.Close();
+            }
+            catch (Exception err)
+            {
+
                 result = "ERROR:" + err.Message;
             }
             return result;
@@ -127,7 +207,7 @@ namespace CommonClass
 
         }
 
-        public SqlDataReader GetRecordsFromDBByID(int id)
+        public SqlDataReader GetRecordsFromDBByID(String id)
         {
             DataSet ds = new DataSet();
 

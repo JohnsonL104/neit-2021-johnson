@@ -16,14 +16,22 @@ namespace Johnson_Lab5
         public Form1()
         {
             InitializeComponent();
+
+            BasicUtils.ToggleButton(btnDelete);
+            BasicUtils.ToggleButton(btnUpdate);
         }
-        public Form1(int id)
+        public Form1(String id)
         {
             InitializeComponent();
 
-            PersonV2 ebook = new PersonV2();
+            BasicUtils.ToggleButton(btnSubmit);
+            PersonV2 person = new PersonV2();
 
-            SqlDataReader dr = ebook.GetRecordsFromDBByID(id);
+            SqlDataReader dr = person.GetRecordsFromDBByID(id);
+
+            person.Id = id;
+
+            lblId.Text = id;
 
             while (dr.Read())
             {
@@ -85,10 +93,73 @@ namespace Johnson_Lab5
                 MessageBox.Show(person.AddRecordToDB());
             }
         }
+        
 
-        private void Form1_Load(object sender, EventArgs e)
+        
+        private void btnDelete_Click(object sender, EventArgs e)
         {
+            PersonV2 person = new PersonV2();
 
+            person.Id = lblId.Text;
+
+            person.UpdateRecord();
+
+
+
+            if (!person.Feedback.Contains("ERROR:"))
+            {
+                String result = person.DeleteRecord();
+                MessageBox.Show(result);
+                Close();
+            }
+            else
+            {
+                MessageBox.Show(person.Feedback);
+                
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            PersonV2 person = new PersonV2();
+
+            person.Id = lblId.Text;
+
+            person.FirstName = txtFName.Text;
+
+            person.MiddleName = txtMName.Text;
+
+            person.LastName = txtLName.Text;
+
+            person.Street1 = txtStreet1.Text;
+
+            person.Street2 = txtStreet2.Text;
+
+            person.City = txtCity.Text;
+
+            person.State = txtState.Text;
+
+            person.Zip = txtZip.Text;
+
+            person.Phone = txtPhone.Text;
+
+            person.Email = txtEmail.Text;
+
+            person.CellPhone = txtCellPhone.Text;
+
+            person.InstagramURL = txtIGUrl.Text;
+
+            if (person.Feedback.Contains("ERROR:"))
+            {
+                MessageBox.Show(person.Feedback, "ERROR");
+            }
+            else
+            {
+                MessageBox.Show(person.UpdateRecord());
+                Close();
+            }
+
+            
         }
     }
 }
