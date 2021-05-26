@@ -41,10 +41,10 @@ namespace EbookConnToDB
                 txtAuthorFirst.Text = dr["AuthorFirst"].ToString();
                 txtAuthorLast.Text = dr["AuthorLast"].ToString();
                 txtEmail.Text = dr["AuthorEmail"].ToString();
-                txtPages.Text = dr["Pages"].ToString(); 
+                txtPages.Text = dr["Pages"].ToString();
                 txtBookmarkPage.Text = dr["BookmarkPage"].ToString();
                 lblEBookID.Text = dr["EBookID"].ToString();
-
+                txtPrice.Text = dr["Price"].ToString();
                 dateTimePicker1.Value = DateTime.Parse(dr["DatePublished"].ToString());
                 dateTimePicker2.Value = DateTime.Parse(dr["dateRentalExpires"].ToString());
             }
