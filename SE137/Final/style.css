@@ -28,7 +28,9 @@ body, html{
 .bg-dark{
     background-color: #323232 !important;
 }
-
+.dropdown-item:hover{
+    color: #111 !important;
+}
 i{
     color: #eee !important;
 }
@@ -59,21 +61,49 @@ p{
     color: #eee;
     margin-bottom: 0;
 }
+
+
+
+
+.jumbotron{
+    width: 100%;
+    display: inline-block;
+    background-image: url("imgs/cclPage.png");
+    background-repeat: no-repeat;
+    opacity: 50%;
+    position: relative;
+}
+.jumbotron a{
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+    background-color: rgba(0, 0, 0, 50);
+}
+.jumbotron:hover{
+    cursor: pointer;
+}
+
+
+
+
 #h2Span{
 
     font-size: 36px;
     color: #00ADB5;
 }
 #idImg{
-    
+    margin-top: 10px;
     width: 10%;
     float:right;
 }
 
 #iconWrapper{
     display: flex;
-    width: 20%;
-    justify-content: center;
+    width: 50%;
+    justify-content: left;
+}
+#iconWrapper i:hover{
+    cursor: pointer;
 }
 #iconWrapper i{
     margin-left: 5px;
@@ -109,25 +139,85 @@ footer{
     width: 100%;
 }
 
-.shrunk{
-    height: 0 !important;
-    transition: all 1s;
 
-    flex-grow: 0;
+
+#featuredP a{
+    text-decoration: none;
+    color: #00ADB5;
+}
+#clickForMore:hover{
+    cursor: pointer;
+}
+#clickForMore{
+    font-family: 'Noto Sans JP', sans-serif !important;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8 );
+    text-decoration: none;
+    color: #00ADB5;
+}
+.col-sm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#projectsContainer{
+    margin-top: 20px;
+}
+
+.card{
+    margin-top: 5px;
+    background-color: #323232;
+    width: 90% !important;
+    height: 100%;
+}
+
+.card-title{
+    color:#00ADB5;
+    font-family: 'Noto Sans JP', sans-serif !important; 
+}
+
+.card a{
+    text-align: center;
+    display: block;
+    position: relative !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    background-color: #191919;
+    color:#00ADB5;
+    text-decoration: none;
 }
 
 
 
 
+@media only screen and (min-width: 1500px){
+    #featuredP{
+        padding-right: 10%;
+    }
+}
 
+@media only screen and (max-width: 1636px){
+    p{
+        font-size: 26px;
+    }
+}
+@media only screen and (max-width: 1140px){
+    p{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 900px){
+    .jumbotron{
+        background-size: auto 100% ;
+    }
+}
 
-
-
-
-
-
-
-
+@media only screen and (min-width: 900px){
+    .jumbotron{
+        background-size:100% auto;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     #iconWrapper{
@@ -135,34 +225,37 @@ footer{
         width: 100%;
         justify-content: space-around;
     }
-    #iconWrapper i{
-        
-        font-size: 100px;
+    p {
+        font-size:18px;
     }
-    p{
-        font-size: 16px;
-    }
+    
     #h2Span{
         font-size: 23;
     }
-.jumbotron img{
-    width: 100%;
-    visibility: hidden;
-    
- }
- #idImg{
-    display: none;
-}
-}
- .jumbotron{
-     width: 100%;
-     display: inline-block;
-     background-image: url("imgs/cclPage.png");
-     background-size: 100% auto;
-     background-repeat: no-repeat;
-     opacity: 50%;
- }
+    .jumbotron{
+        background-size: auto 100% ;
+    }
+    .jumbotron img{
+        width: 100%;
+        visibility: hidden;
+        
+    }
+    #idImg{
+        display: none;
+    }
+    #projectsIcons{
+        position: relative;
+        bottom: 0;
+    }
+    #projectsContainer{
+        overflow:visible;
 
+    }
+    #projectsFooter{
+        position:relative;
+    }
+}
+ 
 
  
 @media only screen and (min-width: 768px) {
@@ -178,11 +271,32 @@ footer{
         padding: 0;
         color: #00ADB5 !important;
     }
+   
 .jumbotron img{
     height: 50vh;
     width: 100%;
     visibility: hidden;
 }
+}
+
+
+@media only screen and (max-height: 730px){
+    #h2Span{
+        font-size: 25px;
+    }
+    p{
+        font-size: 16px;
+    }
+    #iconWrapper i{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-height: 600px){
+     
+    p{
+        font-size: 12px;
+    
 }
 
 
