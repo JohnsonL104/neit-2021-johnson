@@ -11,6 +11,86 @@
 <body>
     <script type="text/javascript">
         alert("Hello world!");
+
     </script>
 </body>
+    <script>
+        function add(x, y){
+            return x+y
+        }
+
+        
+        // Part 1: Variables
+        var a = "string"
+        var b = 3
+        var c = true
+
+        console.log(`a: ${typeof a}`)
+        console.log(`b: ${typeof b}`)
+        console.log(`c: ${typeof c}`)
+
+        console.log(`5 + 2 = ${add(5, 2)}`)
+
+        var arr = []
+
+        for(let i = 1; i < 101; i++){
+            arr.push(i)
+        }
+        
+
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i]%2 == 0 && arr[i]%3 == 0){
+                arr[i] = "fizz buzz";
+            }
+            else if (arr[i]%3 == 0){
+                arr[i] = "buzz"
+            }
+            else if(arr[i]%2 == 0){
+                arr[i] = "fizz"
+            }
+        }
+        
+        console.log(arr)
+
+
+        var objectArray = []
+        for(let i = 1; i < 101; i++){
+            if(i%2 == 0 && i%3 == 0){
+                objectArray.push({
+                    index: i,
+                    label: "fizz buzz"
+                })
+            }
+            else if (i%3 == 0){
+                objectArray.push({
+                    index: i,
+                    label: "buzz"
+                })
+            }
+            else if(i%2 == 0){
+                objectArray.push({
+                    index: i,
+                    label: "fizz"
+                })
+            }
+            else{
+                objectArray.push({
+                    index: i
+                })
+            }
+        }
+        console.log(objectArray)
+
+        for(let i = 0; i < objectArray.length; i++){
+            if(objectArray[i].label == "fizz"){
+                console.log(objectArray[i])
+            }
+        }
+
+        for(let i = 0; i < objectArray.length; i++){
+            for(property in objectArray[i]){
+                console.log(objectArray[i][property])
+            }
+        }
+    </script>
 </html>
