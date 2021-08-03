@@ -32,7 +32,7 @@ namespace WebApplication1
                 Session["flag"] = false;
                 Button temp = (Button)sender;
                 txtLCD.Text = temp.Text;
-            }s
+            }
             
             else
             {
