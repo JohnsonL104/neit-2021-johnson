@@ -23,18 +23,17 @@
 		{first:"Marion", last:"Cobretti", credit:"Cobra" }
 	]
 	var body = document.body;
-	var divs = []
+	var str = "";
 	for(let i = 0; i < people.length; i++){
-		divs[i] = document.createElement('div')
-		body.appendChild(document.createElement('div'))
-		// divs[i].setAttribute('class', 'border')
+		str += `<div class = "border">`
 		for(value in people[i]){
-
-			var p = document.createElement('p')
-			p.textContent = people[i][value]
-			divs[i].appendChild(p)
+			str += "<p>"
+			str += people[i][value]
+			str +="</p>"
 		}
+		str += `</div>`
 	}
+	body.innerHTML = str;
 	
 </script>
 
