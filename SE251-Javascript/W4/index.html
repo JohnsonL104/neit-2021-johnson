@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+        }
+        #grid{
+            visibility: hidden;
+            border: 1px black solid;
+            padding: 5px
+        }
+        .blue{
+            border: 1px solid black;
+            width: 25px;
+            height: 25px;
+            margin: 2px;
+            text-align: center;
+            background-color: blue;
+            
+        }
+        .red{
+            border: 1px solid black;
+            width: 25px;
+            height: 25px;
+            margin: 2px;
+            text-align: center;
+            background-color: red;
+        }
+        .none{
+            border: 1px solid black;
+            width: 25px;
+            height: 25px;
+            margin: 2px;
+            text-align: center;
+        
+        }
+    </style>
+</head>
+<body>
+    <input type = "number" id = "num">
+    <input type = "button" id = "btn" value = "Generate grid"><br>
+    <div id = "grid">
+
+    </div>
+    <script>
+        var num = document.querySelector("#num")
+        var btn = document.querySelector("#btn")
+        var grid = document.querySelector("#grid")
+        function randomNumber (min, max) {
+            return Math.floor (Math.random() * (max - min + 1)) + min;
+        }
+
+        btn.addEventListener('click', (e)=>{
+
+            grid.style.visibility = "visible";
+            var str = "";
+            var total = 0;
+            for(let i = 0; i < num.value; i++){
+                for(let y = 0; y < num.value; y++){
+                    let rnum = randomNumber(1, 100);
+                    if(rnum % 3 == 0){
+                        str += `<div class = "red">`
+                    }
+                    else if (rnum % 2 == 0){
+                        str += `<div class = "blue">`
+                    }
+                    else{
+                        str += `<div class = "none">`
+                    }
+                    str += `${rnum} </div>`
+                    total += rnum;
+                }
+                str+=`<br>`
+            }
+            console.log(total)
+            console.log(num.value)
+            str += `<br> Average: ${Math.round(total/Math.pow(num.value,2))}`
+            grid.innerHTML = str;
+        })
+        
+    </script>
+</body>
+</html>
