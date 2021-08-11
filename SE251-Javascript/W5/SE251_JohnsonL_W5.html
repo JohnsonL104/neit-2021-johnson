@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Week 2 Files</title>
+<style type="text/css">
+	.border{border:1px solid black;}
+</style>
+</head>
+
+<body>
+</body>
+
+<script type="text/javascript">
+	fetch('https://se251-node.herokuapp.com/w2')
+  .then(response => response.json())
+  .then(people => {
+	var body = document.body;
+	var divs = []
+	for(let i = 0; i < people.length; i++){
+		divs[i] = document.createElement('div')
+		
+		divs[i].setAttribute('class', 'border')
+		for(value in people[i]){
+
+			var p = document.createElement('p')
+			p.textContent = people[i][value]
+			divs[i].appendChild(p)
+		}
+		body.appendChild(divs[i])
+	}
+	}).catch(err => console.error(err));
+</script>
+
+</html>
