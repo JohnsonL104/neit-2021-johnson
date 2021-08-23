@@ -1,0 +1,25 @@
+﻿@page
+@model Activity5.Pages.AddTicketModel
+@{
+    ViewData["Title"] = "AddTicket";
+}
+
+<h1>Add Ticket</h1>
+
+<form method="post">
+    <input type="text" asp-for="tTicket.TicketTitle" placeholder="Title" />
+    <input type="text" asp-for="tTicket.TicketDesc" placeholder="Description of Problem" />
+    <input type="text" asp-for="tTicket.Category" placeholder="Category" />
+    <input type="text" asp-for="tTicket.ReportingEmail" placeholder="Your Email" />
+
+    <button type="submit">Submit</button>
+</form>
+
+@{ 
+    if (Model.tTicket is null == false)
+    {
+        <h1>Results</h1>
+        <p>@Model.tTicket.TicketTitle</p>
+        <p>@Model.tTicket.ReportingEmail</p>
+    }
+}
