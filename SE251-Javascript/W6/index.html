@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>W6 - Form Validation</title>
+</head>
+<body>
+    <form action="https://se251-node.herokuapp.com/w6" method="POST">
+        <label for="first">First Name</label>
+        <input type = "text" id = "first" name = "first" title="Input your first name" placeholder = "First Name" message = "Please input correctly" required oninvalid="this.setCustomValidity('Enter First Name Here')" oninput="this.setCustomValidity('')"/>
+        <br><label for="last">Last Name</label>
+        <input type = "text" id = "last" name = "last" title="Input your last name" placeholder = "Last Name" message = "Please input correctly" required oninvalid="this.setCustomValidity('Enter Last Name Here')" oninput="this.setCustomValidity('')"/>
+        <br><label for="email">Email</label>
+        <input type="email" name = "email" required placeholder="Email"/>
+        <br><label for="emailConfirm">Confirm Email</label>
+        <input type="email" name = "emailConfirm"required placeholder="Email Confirmation"/>
+        <br>
+        <input type="button" value="Submit"/>
+    </form>
+    <script>
+
+
+
+
+            var submit = document.querySelector("input[type='button']")
+            var first = document.querySelector("#first")
+            var last = document.querySelector("#last")
+            var inputs = document.querySelectorAll("input[type='email']")
+            var form = document.querySelector("form")
+
+            submit.addEventListener('click', (e)=>{
+                inputs[1].setCustomValidity("");
+                if(!form.checkValidity()){
+                    form.reportValidity();
+                }
+                else if(inputs[0].value != inputs[1].value){
+                    inputs[1].setCustomValidity("Email Addresses do not match");
+                    inputs[1].reportValidity();
+                }
+                else{
+                    first.value = first.value.toUpperCase();
+                    last.value = last.value.toUpperCase();
+                    inputs[0].value = inputs[0].value.toUpperCase();
+                    inputs[1].value = inputs[1].value.toUpperCase();
+                    form.submit();
+                }
+                
+                
+            })
+
+
+
+
+
+            
+
+
+
+
+
+
+    </script>
+</body>
+</html>
