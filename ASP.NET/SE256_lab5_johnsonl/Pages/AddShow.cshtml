@@ -1,0 +1,24 @@
+﻿@page
+@model SE256_lab5_johnsonl.Pages.AddShowModel
+@{
+    ViewData["Title"] = "Add Ticket";
+}
+
+<h1>Add Ticket</h1>
+
+
+<form method="post">
+    <input type="text" asp-for="show.Title" placeholder="Show Title" />
+    <input type="number" asp-for="show.EpisodeCount" placeholder="Number of Episodes" />
+
+    <button type ="submit">Submit</button>
+</form>
+
+@{ 
+    if(Model.show is null == false)
+            {
+                <h1>Results</h1>
+                <p>Title: @Model.show.Title</p>
+                <p>Episode Count: @Model.show.EpisodeCount</p>
+            }
+}

@@ -1,0 +1,80 @@
+
+<html>
+<title>Game Reviews</title>
+<head>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<style type='text/css'>
+			.imgframe   { background:black; padding:12px; border:1px solid #999; }
+		</style>
+</head>
+<body>
+
+    
+
+<div class="container">
+	<div class="row">
+		<div class='col-md-8'>
+			<h1>Game Reviews</h1>
+			
+			
+			<table class="table table-striped">
+			<thead>
+			  <tr>
+				<th>Game Title</th>
+				<th>Console</th>
+				<th>Rating</th>
+				<th>Score</th>
+			  </tr>
+			</thead>
+			<tbody id="reviewsBody">
+			   
+			   
+				
+			</tbody>
+		  </table>
+	  </div>
+	 
+	  <div class='col-md-4' style='margin-top:200px;'>
+		<h2 id="gameTitle"></h2>
+			<img id='gameImage'  src=''>
+	  </div>
+	</div>
+</div>
+
+</body>
+</html>
+
+ <script>
+	
+	
+	fetch('https://se251-node.herokuapp.com/w3')
+	.then(response => response.json())
+	.then(reviews => {
+		var tbody = document.querySelector("#reviewsBody")
+		var str = tbody.innerHTML;
+		for(let i = 0; i < reviews.length; i++){
+			
+			
+			str += "<tr>"
+			str+= `<td><a class = "gameTitle" data-image = "${reviews[i].imageName}" data-title = "${reviews[i].gameTitle}">${reviews[i].gameTitle}</a></td>`	
+			str+= `<td>${reviews[i].consoles}</td>`
+			str+= `<td>${reviews[i].rating}</td>`
+			str+= `<td>${reviews[i].score}</td>`
+			str += "</tr>"
+		}
+		tbody.innerHTML = str;
+
+		var titles = document.querySelectorAll(".gameTitle")
+		var h2 = document.querySelector("#gameTitle")
+		var img = document.querySelector("#gameImage")
+
+		for(let i = 0; i < titles.length; i++){
+			titles[i].addEventListener("click", (e)=>{
+				h2.innerHTML = e.target.dataset.title
+				img.src = `Images/${e.target.dataset.image}`
+			})
+		}
+	} )
+	.catch(err => console.error(err));
+	
+</script>
