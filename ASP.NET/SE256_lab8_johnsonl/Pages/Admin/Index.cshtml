@@ -1,0 +1,38 @@
+﻿@page
+@model SE256_lab5_johnsonl.Pages.Admin.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Login Page</h1>
+
+<form method="post">
+    <div class=" form-group">
+        <label asp-for="admin.ShowAdminEmail"></label>
+        <input asp-for="admin.ShowAdminEmail" type="text" class="form-control" placeholder="Username" />
+        <span asp-validation-for="admin.ShowAdminEmail" class="text-danger"></span>
+    </div>
+    <div class=" form-group">
+        <label asp-for="admin.ShowAdminPW"></label>
+        <input asp-for="admin.ShowAdminPW" type="text" class="form-control" placeholder="Password" />
+        <span asp-validation-for="admin.ShowAdminPW" class="text-danger"></span>
+    </div>
+    <input type ="submit" class ="btn btn-primary">
+</form>
+
+<script src ="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+@{ 
+    if(Model.admin != null && Model.admin.Feedback != null)
+    {
+        <h1>Results</h1>
+        <p>@Model.admin.Feedback</p>
+    }
+}
+
+
+
+
+

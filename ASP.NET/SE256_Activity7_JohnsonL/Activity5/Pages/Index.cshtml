@@ -1,0 +1,69 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @Model.FName</h1>
+
+    <table class="table table-bordered table-sm table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Ticket Title</th>
+                <th>Category</th>
+                <th>Submitted By</th>
+                <th>Reported On</th>
+                <th>Active</th>
+                <th>Dots Contact</th>
+                <th>Response</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model == null)
+            {
+                <tr>
+                    <td colspan="7" class="text-center">No Model</td>
+                </tr>
+            }
+            else
+            {
+                
+                @foreach (var p in Model.tix)
+                {
+                    @if (p.Feedback != null && p.Feedback != "")
+                    {
+                        <p>@p.Feedback</p>
+                    }
+                    else
+                    {
+
+                        <tr>
+                            <td>@p.TicketID</td>
+                            <td>@p.TicketTitle</td>
+                            <td>@p.Category</td>
+                            <td>@p.ReportingEmail</td>
+                            <td>@p.OrigDate</td>
+
+                            @{
+                                if (p.Active == true)
+                                {
+                                    <td>Active</td>
+                                }
+                                else
+                                {
+                                    <td>Closed</td>
+                                }
+
+                            }
+                            <td>@p.ResponderEmail</td>
+                            <td style="width:100%;">@p.ResponderNotes</td>
+                        </tr>
+                    }
+                }
+            }
+            
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,60 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @Model.FName</h1>
+    <table class="table table-bordered table-sm table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Release Date</th>
+                <th>End Date</th>
+                <th>Episode Count</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model == null)
+            {
+                <tr>
+                    <td colspan="7" class="text-center">No Model</td>
+                </tr>
+            }
+            else
+            {
+
+                @foreach (var p in Model.lst)
+                {
+                    @if (p.Feedback != null && p.Feedback != "")
+                    {
+                        <p>@p.Feedback</p>
+                    }
+                    else
+                    {
+
+                        <tr>
+                            <td>@p.ShowID</td>
+                            <td>@p.Title</td>
+                            <td>@p.ReleaseDate</td>
+                            @if (p.EndDate.ToString() != "1/1/0001 12:00:00 AM")
+                            {
+                                <td>@p.EndDate</td>
+                            }
+                            else
+                            {
+                                <td>To be continued</td>
+                            }
+                            <td>@p.EpisodeCount</td>
+
+                        </tr>
+                    }
+                }
+            }
+
+        </tbody>
+    </table>
+</div>
