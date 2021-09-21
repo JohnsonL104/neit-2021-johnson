@@ -1,0 +1,53 @@
+﻿@page
+@model Activity5.Pages.AddTicketModel
+@{
+    ViewData["Title"] = "AddTicket";
+}
+
+<h1>Add Ticket</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="tTicket.TicketTitle"></label>
+        <input asp-for="tTicket.TicketTitle" type="text" class="form-control" placeholder="Brief Descriptive Title" />
+        <span asp-validation-for="tTicket.TicketTitle" class="text-danger"></span>
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="tTicket.TicketDesc"></label>
+        <input asp-for="tTicket.TicketDesc" type="text" class="form-control" placeholder="Description of Problem" />
+        <span asp-validation-for="tTicket.TicketDesc" class="text-danger"></span>
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="tTicket.Category"></label>
+        <input asp-for="tTicket.Category" type="text" class="form-control" placeholder="Category" />
+        <span asp-validation-for="tTicket.Category" class="text-danger"></span>
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="tTicket.ReportingEmail"></label>
+        <input asp-for="tTicket.ReportingEmail" type="text" class="form-control" placeholder="Your Email" />
+        <span asp-validation-for="tTicket.ReportingEmail" class="text-danger"></span>
+
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script src="/lib/jquery//dist/jquery.min.js"></script>
+<script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+
+@{ 
+    if (Model.tTicket is null == false)
+    {
+        <h1>Results</h1>
+        <p>@Model.tTicket.TicketTitle</p>
+        <p>@Model.tTicket.ReportingEmail</p>
+    }
+}

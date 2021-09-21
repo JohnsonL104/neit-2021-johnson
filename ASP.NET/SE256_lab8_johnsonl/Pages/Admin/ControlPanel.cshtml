@@ -1,0 +1,76 @@
+﻿@page
+@model SE256_lab5_johnsonl.Pages.Admin.ControlPanelModel
+@{
+    ViewData["Title"] = "ControlPanel";
+
+}
+
+<h1>ControlPanel</h1>
+
+<div>
+    <table class="table-bordered table-sm table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Show Title</th>
+                <th>Description</th>
+                <th>ReleaseDate</th>
+                <th>EndDate</th>
+                <th>EpisodeCount</th>
+                
+            </tr>
+        </thead>
+
+        <tbody>
+            @if (Model == null)
+            {
+                <tr>
+                    <td colspan="7" class=" = text-center">No MOdel</td>
+                </tr>
+            }
+            else
+            {
+                @foreach (var p in Model.tix)
+                {
+                    <tr>
+                        <td>@p.ShowID</td>
+                        <td>@p.Title</td>
+                        <td>@p.Description</td>
+                        <td>@p.ReleaseDate</td>
+                        <td>@p.EndDate</td>
+                        <td>@p.EpisodeCount</td>
+                        <td><a asp-page="/Admin/EditShow" asp-route-id="@p.ShowID">Edit</a></td>
+                        <td><a asp-page="/Admin/DeleteShow" asp-route-id="@p.ShowID">Delete</a></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
