@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Disney</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+	<body>
+	<nav>
+			<select>
+				<option value="0">Mickey</option>
+				<option value="1">Goofy</option>
+				<option value="2">Donald</option>
+			</select>
+		</nav>
+		<div id="wrapper">
+			<section>
+				<h1>Disney Characters</h1>
+				<img src="images/placeholder.png" alt="character" />
+				<p>Character Name</p>
+				<p><i>Quote Goes Here</i></p>
+			</section>
+		</div>
+		
+	<script>		
+		sel = document.querySelector("select")
+		img = document.querySelector("img")
+		characterName = document.querySelector("p")
+		quote = document.querySelector("i")
+		sel.addEventListener("change", (e)=>{
+			console.log("working")
+			changeStuff(e.target.options[e.target.selectedIndex].text)
+		})
+
+		function changeStuff(value){
+			fetch('https://se251-node.herokuapp.com/final')
+			.then(response => response.json())
+			.then(data => {
+				console.log(data)
+				for(let i = 0; i < data.length; i++){
+					if(data[i].name.includes(value)){
+						console.log(data[i].name)
+						characterName.innerHTML = data[i].name
+						img.src = data[i].image
+						quote.innerHTML = data[i].quote
+					}
+				}
+		
+				
+			});
+			}
+	
+	</script>	
+	</body>
+	
+</html>
+
