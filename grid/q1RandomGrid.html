@@ -76,8 +76,9 @@
 
 	function changeColor(num, color){
 		nums = document.querySelectorAll(".num")
+		num = num.toString()
 		for(let i = 0; i < nums.length; i++){
-			if(nums[i].innerHTML === num.toString()){
+			if(nums[i].innerHTML === num){
 				nums[i].style.backgroundColor = color;
 			}
 		}
